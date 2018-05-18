@@ -201,7 +201,7 @@ void Cloth_object::Calculate_forces(const ngl::Vec3 &_gravity, const ngl::Vec3 &
      p.accumulate_force(p.Getmass()*ngl::Vec3(0,-9.8f,0));
 
      // Apply the wind using the last calculated normals
-     ngl::Vec3 force =p.getNormal() * (p.getNormal().dot(_wind*0.6f));
+     ngl::Vec3 force =p.getNormal() * (p.getNormal().dot(_wind*0.5f));
      p.accumulate_force(force);
 
      // Reset the normal, will recalculate after position is adjusted
